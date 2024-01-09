@@ -1,0 +1,130 @@
+.intro{
+    width: 90%;
+    margin: 50px auto;
+}
+
+.intro h1{
+    color: #949494;
+    font-size: 45px;
+    padding: 2%;
+}
+#press{
+    width: 90%;
+    margin: 10px auto;
+    height: 100%;
+    
+    
+}
+
+.bg{
+    background-image: url('/static/home/assets/press/sliderBG.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: .7;
+    height: 100px;
+    z-index: -9;
+}
+
+#press *{
+    color: #949494;
+
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color:transparent;
+    gap: 30px;
+    padding: 2%;
+    height: fit-content;
+    
+}
+hr{
+    color: var(--admgreen);
+}
+
+.container p{
+    color: #949494;
+    font-size: 18px;
+    line-height: 1.5em;
+    opacity: 1;
+   
+}
+.press-content{
+display: flex;
+gap: 30px;
+align-items: flex-start;
+}
+
+.items{
+    display: flex;
+    flex-direction: column;
+   
+    padding-bottom: 15px;
+}
+.heading{
+    color: #d1d1d1 !important;
+    font-size: 20px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    height: fit-content;
+    
+}
+
+strong{
+    font-weight: 800;
+    font-size: 20px !important;
+    text-transform: uppercase;
+    margin-right: 15px;
+    color: #C9D745 !important}
+
+.date{
+    font-size: 14px;
+    color: #C9D745 !important;
+}
+
+
+
+.press-link{
+    /* text-decoration: none; */
+    font-size: 20px;
+    padding: 8px;
+    /* border: #C9D745 1px solid; */
+    padding-bottom: 10px;
+    width: 100px;
+    height: fit-content;
+    /* border-radius: 5px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.joinus p{
+    color: #1b1b1b !important;
+}
+
+.linx{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 30px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.linx a {
+    text-decoration: none;
+    font-size: 18px;
+   
+    }
+.dots{
+    /* display: flex;
+    align-items: center;
+    align-items: flex-end; */
+    padding-top: -5% !important;
+    margin-left: 10px;
+        
+    white-space: nowrap;
+}
+

@@ -1,0 +1,92 @@
+{% extends 'home/base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}
+  African Design Matters
+{% endblock %}
+
+<!-- <div></div> -->
+
+{% block content %}
+  <head>
+    <link rel="stylesheet" href="{% static 'home/css/index.css' %}" />
+  </head>
+
+  {% block index %}
+    <section class="hero">
+      <div class="heroBanner">
+        <div class="banner-left" data-aos="fade-up">
+          <img src="{% static 'home/images/new/adm_text.png' %}" alt="" style="margin-bottom: 100px;" />
+        </div>
+        <div class="banner-right" data-aos="fade-left">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="{% static 'home/img/alina/1.jpeg' %}" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="{% static 'home/img/alina/2.jpeg' %}" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="{% static 'home/img/alina/3.webp' %}" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="{% static 'home/img/alina/4.webp' %}" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="{% static 'home/img/alina/5.jpg' %}" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <img src="{% static 'home/images/new/adm_mask.png' %}" alt="mask" class="maskcss" style="margin-top: 150px;" />
+      </div>
+    </section>
+  {% endblock %}
+
+  {% block tabs %}
+
+  {% endblock %}
+  <section class="thirdSec1">
+    <div class="tab-design">
+      <div class="row" style="border-bottom: 1px solid var(--admgreen);">
+        <h1 class="tribute">Tribute To Alina Wheeler</h1>
+      </div>
+    </div>
+
+    <div class="slickslide" data-aos="fade-up" style="background: none;">
+      <div class="autoplay">
+        <a href="" class="cardslide">
+          <img src="{% static 'home/assets/architecture/adjaye/aj1.png' %}" alt="" />
+          <h3 style="margin-bottom: 0;">Adjaye Associates</h3>
+        </a>
+        <a href="" class="cardslide">
+          <img src="{% static 'home/assets/architecture/adjaye/aj2.png' %}" alt="" />
+          <h3 style="margin-bottom: 0;">Adjaye Associates</h3>
+        </a>
+        <a href="" class="cardslide">
+          <img src="{% static 'home/assets/architecture/kamara/k1.png' %}" alt="" />
+          <h3 style="margin-bottom: 0;">Mariam Kamara</h3>
+        </a>
+        <a href="" class="cardslide">
+          <img src="{% static 'home/assets/architecture/kamara/k2.png' %}" alt="" />
+          <h3 style="margin-bottom: 0;">Mariam Kamara</h3>
+        </a>
+        <a href="" class="cardslide">
+          <img src="{% static 'home/assets/architecture/kere/kr1.png' %}" alt="" />
+          <h3 style="margin-bottom: 0;">Francis Kere</h3>
+        </a>
+       
+      </div>
+    </div>
+  </section>
+
+  
+
+{% endblock %}
+
+{% block javascript %}
+  
+{% endblock %}

@@ -1,0 +1,411 @@
+{% load static %}
+{% load i18n %}
+{% load cache %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES %}
+{% get_language_info_list for LANGUAGES as languages %}
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter" />
+    <link href="{% static 'home/css/style.css' %}" rel="stylesheet" />
+    <link href="{% static 'home/css/all.css' %}" rel="stylesheet" />
+    <link href="{% static 'home/css/font-awesome.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'home/aos/aos.css' %}" rel="stylesheet" />
+    <link href="{% static 'home/glightbox/css/glightbox.min.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'home/slick/slick.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/slick/slick-theme.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/swiper/swiper-bundle.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/swiper/swiper-bundle.css' %}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="{% static 'home/css/footer.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/jquery-ui/jquery-ui.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/jquery-ui/jquery-ui.structure.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/jquery-ui/jquery-ui.theme.css' %}" />
+   
+    <link rel="stylesheet" href="{% static 'home/yBox/dist/css/ybox.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/css/drop.css' %}">
+    
+   
+      <title> {% block title %} {% endblock title %}</title>
+    
+      
+    {% block jquery %}
+      <script src="{% static 'home/jquery/jquery-3.6.0.min.js' %}"></script>
+    {% endblock %}
+  </head>
+
+  <body>
+    <section>
+   {% comment %} {% cache 0 header %} {% endcomment %}
+      <header id="header"  class="scrollhead hero" style="margin-top: 1px;min-height: 70px;">
+        <nav id="navbar" class="navbar" style="background-color: var(--admblack2);">
+          <div class="div" data-aos="fade-right">
+            <a href="{% url 'home:index' %}"><img class="logofrme" src="{% static 'home/img/ADM_LOGO_FRAME.png' %}" alt="" /></a>
+          </div>
+
+          <ul class="first-ul" data-aos="fade-left">
+            <div class="input-grup2">
+              {% comment %} <form action="{% url 'home:search' %}" method="GET">
+                <input id="home-search" type="search" class="input-nav" placeholder="{% trans 'Search here' %}" name="q" />
+                <button class="btn-transparent"><i class="fa fa-search"></i></button>
+              </form> {% endcomment %}
+            </div>
+            <ul>
+              <li>
+                <a class="nav-link active" href="{% url 'home:manifesto' %}">
+                  <img src="{% static 'home/img/hormMenuLight.svg' %}" alt="" />
+                  <p style="color: white;" class="icon-name">{% trans "Manifesto" %}</p><?xml-stylesheet type="text/css" href="{% static 'home/css/style.css' %}" ?>
+                </a>
+              </li>
+              <li>
+                <a class="nav-link" href="{% url 'home:press' %}">
+                  <img src="{% static 'home/img/adinkraLight.svg' %}" alt="" />
+                  <p style="color: white;" class="icon-name">{% trans "Press" %}</p>
+                </a>
+              </li>
+                              {% comment %} <hr> {% endcomment %}
+              
+              </ul>
+            </div>
+          </li>
+          
+       
+            
+              
+               
+            </ul>
+          </ul>
+          <div class="mobile-menu">
+            <div class="iconmenu">
+              <i class="fas fa-bars"></i>
+              <div class="submenu">
+                {% comment %} <div class="div">
+                  <input id="home-search" type="search" class="input-nav" placeholder="Search here" style="border-bottom: 2px solid var(--admgreen);width: 84%;" name="q" />
+                  <button class="btn-transparent"><i class="fa fa-search"></i></button>
+                </div> {% endcomment %}
+                <ul>
+                  <li>
+                    <a href="#hero"><span>{% trans "Manifesto" %}</span></a>
+                  </li>
+                  <li>
+                    <a href="#about"><span>{% trans "Press" %}</span></a>
+                  </li>
+                 
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+       <header id="header "  class="pageUp">
+        <nav id="navbar" class="navbar" style="background-color: var(--admblack2);">
+          <div class="div" data-aos="fade-right">
+            <a href="{% url 'home:index' %}"><img class="logofrme" src="{% static 'home/img/ADM_LOGO_FRAME.png' %}" alt="" /></a>
+          </div>
+
+          <ul class="first-ul" data-aos="fade-left">
+            <div class="input-grup2">
+        
+            </div>
+            <ul>
+              <li>
+                <a class="nav-link active" href="{% url 'home:manifesto' %}">
+                  <img src="{% static 'home/img/hormMenuLight.svg' %}" alt="" />
+                  <p style="color: white;" class="icon-name">{% trans "Manifesto" %}</p><?xml-stylesheet type="text/css" href="{% static 'home/css/style.css' %}" ?>
+                </a>
+              </li>
+              <li>
+                <a class="nav-link" href="{% url 'home:press' %}">
+                  <img src="{% static 'home/img/adinkraLight.svg' %}" alt="" />
+                  <p style="color: white;" class="icon-name">{% trans "Press" %}</p>
+                </a>
+              </li>
+             
+               <li class="nav-link" style="padding: 0;">
+           
+            <div class="languages" style="margin-left: 4px;">
+              
+              
+          </ul>
+          <div class="mobile-menu">
+            <div class="iconmenu">
+              <i class="fas fa-bars"></i>
+              <div class="submenu">
+                {% comment %} <div class="div">
+                  <input id="home-search" type="search" class="input-nav" placeholder="Search here" style="border-bottom: 2px solid var(--admgreen);width: 84%;" name="q" />
+                  <button class="btn-transparent"><i class="fa fa-search"></i></button>
+                </div> {% endcomment %}
+                <ul>
+                  <li>
+                    <a href="#hero"><span>{% trans "Manifesto" %}</span></a>
+                  </li>
+                  <li>
+                    <a href="#about"><span>{% trans "Press" %}</span></a>
+                  </li>
+              
+                  {% comment %} <li>
+                    <a href="#samples"><span>{% trans "Account" %}</span></a>
+                  </li> {% endcomment %}
+                  <!-- <li><a href="#samples"><img src="./img/homeProfile.png" alt=""></a></li> -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      {% comment %} {% endcache %} {% endcomment %}
+    </section>
+
+    {% block tabs %}
+      <div class="tab-design">
+        <div class="row" style="border-bottom: 1px solid var(--admgreen);">
+          <div class="sect-left row">
+            <button class="pill-btn-lg tablink tab-active" onclick="switchTabs(event,0)">Design</button>
+            <button class="pill-btn-lg tablink exceptions" onclick="switchTabs(event,1)">Seventh Art</button>
+            <button class="pill-btn-lg tablink exceptions" onclick="switchTabs(event,2)">Other</button>
+            <button class="pill-btn-lg tablink exceptions" onclick="switchTabs(event,3)">Directory</button>
+          </div>
+          <div class="sect-right">
+            <div class="iconmenu">
+              <p>
+                Filter By <i class="fa fa-chevron-down white"></i>
+              </p>
+              <div class="submenu" style="border: 1px dotted var(--admgreen);">
+                <ul>
+                  <li>
+                    <a href="#hero"><span>Manifesto</span></a>
+                  </li>
+                  <li>
+                    <a href="#about"><span>Press</span></a>
+                  </li>
+                  <li>
+                    <a href="#samples"><span>Contact</span></a>
+                  </li>
+                  <li>
+                    <a href="#samples"><span>Account</span></a>
+                  </li>
+                  <!-- <li><a href="#samples"><img src="./img/homeProfile.png" alt=""></a></li> -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row tab-submenu" data-aos="fade-up">
+          <a class="pill-btn" href="">Photography</a>
+          <a class="pill-btn" href="">Product Design</a>
+          <a class="pill-btn" href="">UX/UI Design</a>
+          <a class="pill-btn" href="">Animation Design</a>
+          <a class="pill-btn" href="">Game Design</a>
+          <a class="pill-btn" href="">Environmental Graphics Design</a>
+          <a class="pill-btn" href="">Type Design</a>
+          <a class="pill-btn" href="">Package Design</a>
+          <a class="pill-btn" href="">Graphic Design</a>
+          <a class="pill-btn" href="">Digital Design</a>
+          <a class="pill-btn" href="">Interaction Design (IxD)</a>
+          <a class="pill-btn" href="">Branding Design</a>
+          <a class="pill-btn" href="">Print Making</a>
+          <a class="pill-btn" href="">Publishing Design</a>
+          <a class="pill-btn" href="">Photography</a>
+          <a class="pill-btn" href="">Interior Design</a>
+          <a class="pill-btn" href="">Fashion Design</a>
+          <a class="pill-btn" href="">Industrial Design</a>
+        </div>
+        <div class="row tab-submenu isHidden" data-aos="fade-up">
+          <a class="pill-btn" href="">Game Design</a>
+          <a class="pill-btn" href="">Environmental Graphics Design</a>
+          <a class="pill-btn" href="">Type Design</a>
+          <a class="pill-btn" href="">Package Design</a>
+          <a class="pill-btn" href="">Graphic Design</a>
+          <a class="pill-btn" href="">Digital Design</a>
+        </div>
+
+        <div class="row tab-submenu isHidden" data-aos="fade-up">
+          <a class="pill-btn" href="">Publishing Design</a>
+          <a class="pill-btn" href="">Photography</a>
+          <a class="pill-btn" href="">Interior Design</a>
+          <a class="pill-btn" href="">Fashion Design</a>
+          <a class="pill-btn" href="">Industrial Design</a>
+        </div>
+        <div class="row tab-submenu isHidden" data-aos="fade-up">
+          <a class="pill-btn" href="">Interior Design</a>
+          <a class="pill-btn" href="">Fashion Design</a>
+        </div>
+      </div>
+    {% endblock %}
+
+    {% block content %}
+
+    {% endblock %}
+
+    {% block footer %}
+      {% comment %} {% cache 300 footer %} {% endcomment %}
+      <section id="footer">
+        <div class="footer-1">
+          <div class="row" style="margin-bottom:80px;">
+            <div class="f-left">
+              <ul data-aos="fade-up">
+                <li>
+                  <a href="mailto:info@africandesignmatters.com" rel="noopener noreferrer">info@africandesignmatters.com</a>
+                </li>
+              </ul>
+              <br />
+              <h2 data-aos="fade-up">
+                African Design Matters
+                <img src="{% static 'home/img/ADM_Logo 1.svg' %}" alt="" />
+              </h2>
+            </div>
+            <div class="f-middle" data-aos="fade-up">
+              <h2>{% trans "Useful Links" %}</h2>
+              <ul>
+                <li>
+                  <a href="#">{% trans "Home" %}</a>
+                </li>
+                <li>
+                  <a href="#">{% trans "Manifesto" %}</a>
+                </li>
+                <li>
+                  <a href="#">{% trans "Resources" %}</a>
+                </li>
+                <li>
+                  <a href="#">{% trans "Contact" %}</a>
+                </li>
+                <li>
+                  <a href="#">{% trans "Press" %}</a>
+                </li>
+                <li>
+                  <a href="#">{% trans "Terms of Service" %}</a>
+                </li>
+                <li>
+                  <a href="#">{% trans "Privacy Policy" %}</a>
+                </li>
+              </ul>
+            </div>
+            <div class="f-right" data-aos="fade-up">
+              <h2>{% trans "Projects" %}</h2>
+              <ul>
+                <li>
+                  <a href="#">African Design Matters</a>
+                </li>
+                <li>
+                  <a href="#">Adikanfo</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="f-Bhals" data-aos="fade-right">
+              <p>{% trans "Diversity in Design, Design for Diversity" %}</p>
+              <small>{% trans "Copyrights" %} © 2020-2023 African Design Matters, {% trans "All Rights Reserved." %}</small>
+            </div>
+            <div class="f-Shals" data-aos="fade-left">
+              <ul>
+                <li>
+                  <a href=""><span><i class="fab fa-facebook-f"></i></span></a>
+                </li>
+                <li>
+                  <a href=""><span><i class="fab fa-instagram"></i></span></a>
+                </li>
+                <li>
+                  <a href=""><span><i class="fab fa-twitter"></i></span></a>
+                </li>
+                <li>
+                  <a href=""><span><i class="fab fa-youtube"></i></span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      {% comment %} {% endcache %} {% endcomment %}
+    {% endblock %}
+
+    {% block preloader %}
+      <div id="preloader"></div>
+      <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    {% endblock %}
+
+    <!-- Slider main container -->
+
+
+    {% block jscript %}
+      <script src="{% static 'home/jquery-ui/jquery-ui.js' %}"></script>
+      {% comment %} <script src="{% static 'home/jquery-ui/jquery.timepicker.min.js' %}"></script> {% endcomment %}
+      <script src="{% static 'home/aos/aos.js' %}"></script>
+     <script src="{% static 'home//glightbox/js/glightbox.min.js' %}"></script> 
+      <script src="{% static 'home/js/jquery-1.11.0.min.js' %}"></script>
+      <script src="{% static 'home/js/jquery-migrate-1.2.1.min.js' %}"></script>
+      <script src="{% static 'home/slick/slick.min.js' %}"></script>
+      <script src="{% static 'home/swiper/swiper-bundle.min.js' %}"></script> 
+      <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+      <script src="{% static 'home/datatables/js/jquery.dataTables.min.js' %}"></script>
+    
+      <script src="{% static 'home/yBox/dist/js/directive.min.js' %}"></script>
+      <script src="{% static 'home/yBox/dist/js/ybox.min.js' %}"></script>
+      <script>
+        const swiper = new Swiper('.swiper', {
+                // Optional parameters
+                speed: 800,
+                effect: "cards",
+                grabCursor: true,
+                slidesPerView: 1,
+                loop: true,
+                spaceBetween: 30,
+                centeredSlides: true,
+                autoplay: {
+                    delay: 5000,
+                },
+
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+                // And if we need scrollbar
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
+            });
+
+    </script>
+
+      <script src="{% static 'home/js/main.js' %}"></script>
+
+      <script src="{% static 'home/js/parazoom.min.js' %}"></script>
+      <script>
+  //jQuery('img').parazoom();
+  
+</script>
+{% comment %} <script src="{% static 'home/js/drop.js' %}"></script> {% endcomment %}
+    {% endblock %}
+
+    {% block javascript %}
+
+    {% endblock %}
+
+    <script>
+      $(document).ready(function() {
+        {% block domready %}
+        {% endblock %}
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+#manifesto{
+    width: 95%;
+    margin: 100px auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+}
+
+#manifesto *{
+  
+    font-family: 'Inter', sans-serif;
+}
+
+.intro{
+    width: 95%;
+    margin: 100px auto;
+    
+}
+
+.container p, .joinus p{
+    line-height: 1.8em;
+    font-size: 20px;
+
+    width: 80%;
+    /* padding: 20px; */
+  
+    
+}
+.intro h1, .title, h1{
+    font-size: 35px;
+    color: var(--admgreen2);
+}
+.joinus p, strong{
+    color: var(--admgreen2) !important;
+    font-weight: 600;
+    font-size: 35px;
+}

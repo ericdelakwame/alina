@@ -1,0 +1,106 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-24 17:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: home/templates/home/base.html:58 home/templates/home/base.html:142
+msgid "Search here"
+msgstr ""
+
+#: home/templates/home/base.html:66 home/templates/home/base.html:115
+#: home/templates/home/base.html:150 home/templates/home/base.html:200
+#: home/templates/home/base.html:327 home/templates/home/index.html:62
+msgid "Manifesto"
+msgstr ""
+
+#: home/templates/home/base.html:72 home/templates/home/base.html:118
+#: home/templates/home/base.html:156 home/templates/home/base.html:203
+#: home/templates/home/base.html:336 home/templates/home/index.html:63
+msgid "Press"
+msgstr ""
+
+#: home/templates/home/base.html:78 home/templates/home/base.html:121
+#: home/templates/home/base.html:162 home/templates/home/base.html:206
+#: home/templates/home/base.html:333 home/templates/home/index.html:64
+msgid "Contact"
+msgstr ""
+
+#: home/templates/home/base.html:124 home/templates/home/base.html:209
+#: home/templates/home/index.html:65
+msgid "Account"
+msgstr ""
+
+#: home/templates/home/base.html:321
+msgid "Useful Links"
+msgstr ""
+
+#: home/templates/home/base.html:324
+msgid "Home"
+msgstr ""
+
+#: home/templates/home/base.html:330
+msgid "Resources"
+msgstr ""
+
+#: home/templates/home/base.html:339
+msgid "Terms of Service"
+msgstr ""
+
+#: home/templates/home/base.html:342
+msgid "Privacy Policy"
+msgstr ""
+
+#: home/templates/home/base.html:347
+msgid "Projects"
+msgstr ""
+
+#: home/templates/home/base.html:361
+msgid "Diversity in Design, Design for Diversity"
+msgstr ""
+
+#: home/templates/home/base.html:362
+msgid "Copyrights"
+msgstr ""
+
+#: home/templates/home/base.html:362
+msgid "All Rights Reserved."
+msgstr ""
+
+#: home/templates/home/index.html:149
+msgid "Join the "
+msgstr ""
+
+#: home/templates/home/index.html:149
+msgid ""
+"an initiative dedicated to creating visibility and promoting African art and "
+"cultural heritage, design sensibility, and systems through the works of "
+"Black,  Indigenous, People of Color, Afro-Caribbean, and African-born "
+"creative people."
+msgstr ""
+
+#: home/templates/home/index.html:154
+msgid "Join Us"
+msgstr ""
+
+#: home/templates/home/index.html:161
+msgid "Community"
+msgstr ""
+
+#: home/templates/home/index.html:164
+msgid "Find Nearby Studios"
+msgstr ""

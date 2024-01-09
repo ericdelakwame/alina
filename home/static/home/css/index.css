@@ -1,0 +1,76 @@
+#index{
+height: 100vh;
+
+}
+.tribute{
+    font-size: 55px;
+    margin-left: 10%;
+    color: #d1d1d1;
+}
+#community{
+width: 95%;
+margin: 30px auto;
+color: #d1d1d1;
+display: flex;
+flex-direction: column;
+}
+
+
+#map{
+width: 100%;
+min-height: 600px;
+}
+
+.slider-container{
+    /* width: 80%; */
+    display: flex;
+    flex-direction: column;
+    /* gap: 30px; */
+}
+
+#infowindow{
+    width: 300px;
+    height: 200px;
+    background-color: #1b1b1b;
+    color: #d1d1d1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.connect-btn{
+    color: #d1d1d1;
+    padding: 4px;
+    border: #d1d1d1 1px solid;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.user-name{
+    text-transform: capitalize;
+    font-size: 16px;
+}
+
+#slider,  input[type="range"]::-webkit-slider-thumb, .ui-slider-handle {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px; 
+    border-radius: 5%;
+    background-color:var(--adm_green2);
+    cursor: pointer;
+}
+
+.ui-corner-al{
+    color: yellowgreen;
+}
+
+input[type="range"] {
+    /* -webkit-appearance: none; */
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    margin: 20px 0;
+  }

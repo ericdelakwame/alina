@@ -1,0 +1,74 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+
+{% block tabs %}
+    
+{% endblock tabs %}
+    
+{% block title %}
+    African Design Matters
+{% endblock title %}
+
+
+
+{% block content %}
+    
+<div id="mani">
+    <head>
+        <link rel="stylesheet" href="{% static 'home/css/mani.css' %}">
+    </head>
+    
+    <div class="component" >
+        <ul class="align" style="display: flex; justify-content: center; align-items: center;">
+            <li>
+                <figure class='book' >
+    
+                    <!-- Front -->
+    
+                    <ul class='hardcover_front' >
+                        <li>
+                            <div class="coverDesign">
+                                <h1 style="width: 80%;margin: auto;text-align: center;padding-top: 50px;">African Design Matters</h1>
+                                <p >Manifesto</p>
+                            </div>
+                        </li>
+                        <li></li>
+                    </ul>
+    
+                    <!-- Pages -->
+    
+                    <ul class='page' style="background-color: transparent;color: #d1d1d1;">
+                        <li></li>
+                        <li style="display: flex;align-items: center;justify-content: center;">
+                            <a  class="btn-grey" href="#">See More</a>
+                        </li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+    
+                    <!-- Back -->
+    
+                    <ul class='hardcover_back'>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <ul class='book_spine'>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <figcaption>
+                        <h1>ADM</h1>
+                        <span>Diversity in Design, </span>
+                        <p>Design for Diversity.</p>
+                    </figcaption>
+                </figure>
+            </li>
+        </ul>
+    </div>
+    
+    </div>
+    
+{% endblock content %}
+    
