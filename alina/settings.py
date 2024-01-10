@@ -1,14 +1,17 @@
 import os
 from pathlib import Path
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+import re
+import  environ
+
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-_39z0c35=el17neb&q+rgneg$^y*f=(&!#7j(mr&z0de5%c5ia'
+env = environ.Env()
+environ.Env.read_env()
+
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -70,6 +73,19 @@ DATABASES = {
 }
 
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': env('DB_NAME'),
+#         'USER': env('DB_USER'),
+#         'PASSWORD': env('DB_PASSWORD'),
+#         'PORT': '',
+#         'HOST': 'localhost',
+#     }
+# }
+
+
+
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
@@ -114,3 +130,23 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+ADMINS = [('Eric', 'ericdelakwame@gmail.com')]
+
+
+# SECURITY STUFF
+MANAGERS = ADMINS
+DISALLOWED_USER_AGENTS = (
+    re.compile(r'^NaverBot.*'),
+    re.compile(r'^EmailSiphon.*'),
+    re.compile(r'^SiteSucker.*'),
+    re.compile(r'^sohu-search')
+)
+IGNORABLE_404_STARTS = ('/cgi-bin/', '/_vti_bin', '/_vti_inf')
+IGNORABLE_404_ENDS = ('mail.pl', 'mailform.pl', 'mail.cgi',
+                      'mailform.cgi', 'favicon.ico', '.php')
+
+# CSRF_COOKIE_SECURE = True
+# SESSION_COOKIE_SECURE = True
+# SECURE_SSL_REDIRECT = True

@@ -12,6 +12,10 @@
     font-family: 'Inter', sans-serif;
 }
 
+.container p{
+    color: #949494;
+}
+
 .intro{
     width: 95%;
     margin: 100px auto;
@@ -29,10 +33,14 @@
 }
 .intro h1, .title, h1{
     font-size: 35px;
-    color: var(--admgreen2);
+    color: var(--admgreen);
 }
-.joinus p, strong{
-    color: var(--admgreen2) !important;
-    font-weight: 600;
+.joinus p, .joinus strong{
+    color: #1b1b1b !important;
+    /* font-weight: 600; */
+    font-size: 35px;
+}
+
+p strong{
     font-size: 35px;
 }
