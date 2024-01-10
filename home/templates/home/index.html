@@ -1,6 +1,7 @@
 {% extends 'home/base.html' %}
 {% load i18n %}
 {% load static %}
+{% comment %} {% load embed_video_tags %} {% endcomment %}
 
 {% block title %}
   African Design Matters
@@ -51,11 +52,17 @@
   {% endblock %}
   <section class="thirdSec1">
     <div class="tab-design">
-      <div class="row" style="border-bottom: 1px solid var(--admgreen);">
-        <h1 class="tribute">Tribute To Alina Wheeler</h1>
+      <div class="row" >
+        <h1 class="tribute">A Tribute To Alina Wheeler</h1>
       </div>
     </div>
 
+    <div class="vidLibrary">  
+      <iframe  
+      src="https://youtube.com/embed/fwvM3VAicdo" > 
+      </iframe>
+    </div>
+{% comment %} 
     <div class="slickslide" data-aos="fade-up" style="background: none;">
       <div class="autoplay">
         <a href="" class="cardslide">
@@ -80,7 +87,7 @@
         </a>
        
       </div>
-    </div>
+    </div> {% endcomment %}
   </section>
 
   

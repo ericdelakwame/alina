@@ -3,8 +3,10 @@ height: 100vh;
 
 }
 .tribute{
+    width: 90%;
+    margin: auto;
     font-size: 55px;
-    margin-left: 10%;
+    /* margin-left: 10%; */
     color: #d1d1d1;
 }
 #community{
@@ -14,6 +16,23 @@ color: #d1d1d1;
 display: flex;
 flex-direction: column;
 }
+
+.vidLibrary {
+    width: 100%;
+    padding: 12px 5vw;
+}
+
+.vidLibrary iframe {
+    width: 80%;
+    min-height: 65vh;
+}
+
+.vidLibrary h2 {
+    font-size: 2.4rem;
+    color: white;
+    margin-bottom: 5px;
+}
+
 
 
 #map{
